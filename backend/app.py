@@ -13,7 +13,7 @@ def ask_rag():
     if not user_query:
         return jsonify({"error": "No query provided"}), 400
 
-    response = your_rag_model.get_answer(user_query)  # Call your RAG model
+    response = rag_model.get_answer(user_query)  # Call your RAG model
     return jsonify({"response": response})
 
 if __name__ == '__main__':

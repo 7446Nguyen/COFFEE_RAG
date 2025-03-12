@@ -50,49 +50,52 @@
         <a href="#" onclick="return false;" data-original="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" width="24" height="24" alt="Hipstirred on Instagram"></a>
     </footer>
 
-    <!-- Chatbot UI -->
+<!-- Chatbot UI -->
+ <form action="../backend/app.py" method="post"> <!--Added method attribute b/c it has to do with how you want to send the data, not 100% sure if it should be post or get-->
     <button id="chatbot-button">💬</button>
     <div id="chatbot-container">
         <div id="chat-header">MochaMate</div>
         <div id="chatbox"></div>
         <div id="chat-input-container">
-            <input type="text" id="userInput" placeholder="Type a message...">
+            <input type="text" id="userInput" placeholder="Type a message..." name="userInput"> <!--Added name attribute, which is used to Identify fields for the PROGRAM processing the data-->
             <button id="sendButton">Send</button>
         </div>
     </div>
+</form>
 
-    <script>
-        document.getElementById("chatbot-button").addEventListener("click", function() {
-            let chatbot = document.getElementById("chatbot-container");
-            chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
+
+<script>
+    document.getElementById("chatbot-button").addEventListener("click", function() {
+        let chatbot = document.getElementById("chatbot-container");
+        chatbot.style.display = chatbot.style.display === "flex" ? "none" : "flex";
+    });
+
+    async function sendMessage() {
+        let inputField = document.getElementById("userInput");
+        let chatbox = document.getElementById("chatbox");
+        let userMessage = inputField.value.trim();
+        if (!userMessage) return;
+
+        chatbox.innerHTML += `<div class='message user'>${userMessage}</div>`;
+        inputField.value = "";
+        chatbox.scrollTop = chatbox.scrollHeight;
+
+        let response = await fetch("https://flask-rag-api.onrender.com/ask", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ query: userMessage })
         });
 
-        async function sendMessage() {
-            let inputField = document.getElementById("userInput");
-            let chatbox = document.getElementById("chatbox");
-            let userMessage = inputField.value.trim();
-            if (!userMessage) return;
+        let data = await response.json();
+        chatbox.innerHTML += `<div class='message bot'>${data.response}</div>`;
+        chatbox.scrollTop = chatbox.scrollHeight;
+    }
 
-            chatbox.innerHTML += `<div class='message user'>${userMessage}</div>`;
-            inputField.value = "";
-            chatbox.scrollTop = chatbox.scrollHeight;
-
-            let response = await fetch("https://flask-rag-api.onrender.com/ask", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ query: userMessage })
-            });
-
-            let data = await response.json();
-            chatbox.innerHTML += `<div class='message bot'>${data.response}</div>`;
-            chatbox.scrollTop = chatbox.scrollHeight;
-        }
-
-        document.getElementById("sendButton").addEventListener("click", sendMessage);
-        document.getElementById("userInput").addEventListener("keypress", function(event) {
-            if (event.key === "Enter") sendMessage();
-        });
-    </script>
+    document.getElementById("sendButton").addEventListener("click", sendMessage);
+    document.getElementById("userInput").addEventListener("keypress", function(event) {
+        if (event.key === "Enter") sendMessage();
+    });
+</script>
 </body>
 
 </html>
