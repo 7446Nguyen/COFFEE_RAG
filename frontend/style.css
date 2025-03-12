@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rancho&family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rancho&family=Yeseva+One&display=swap');
+
+body{
+    font-family:Abel, Arial, sans-serif;
+    margin:0;
+}
+header{
+    text-align: center;
+    padding-top: 1rem;
+}
+h1{
+    font-family:Rancho,sans-serif;
+    font-size: 7rem;
+    margin-bottom: 0;
+    text-shadow: 3px 3px 2px rgb(65, 41, 6);
+}
+h2{
+    color:#d17e32;
+    font-size: 1.8rem;
+    margin:2.5rem auto .75rem;
+}
+nav li{
+    display: inline-block;
+}
+nav a{
+    background-color: #d17e32;
+    color: white;
+    display:inline-block;
+    margin: .25rem;
+    padding: .3rem;
+    text-decoration: none;
+}
+footer{
+    background-color: #e9d8c8;
+    text-align: center;
+}
+footer img{
+    display: inline-block;
+    padding: 1rem .5rem;
+}
+/*CLASSES*/
+.bean-pic{
+    background-image: url(images/hero.jpg);
+    background-position: center 75%;
+    background-size: cover;
+    color:white;
+    margin: 0;
+    text-align: center;
+}
+.body-copy{
+    max-width:35rem;
+    margin:auto;
+    width: 35%;
+}
+.body-copy p{
+    color:#555;
+    font-size: 1.1rem;
+    line-height:1.8;
+    text-align: justify;
+}
+.hero{
+    padding:10%;
+}
+.tagline{
+    /*font-family: Abel,sans-serif;---see body*/
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+/*LINK STATES*/
+nav a{
+    color: white;
+}
+nav a:visited{
+    color:rgb(57, 4, 100);
+
+}
+nav a:hover{
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+nav a:focus{
+    background-color: white;
+    color:rgb(171, 45, 0);
+}
+nav a:active{
+    background-color: darkcyan;
+    color:white;
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+
+/*AI CHATBOT*/
+
+#chatbot-button {
+    position: fixed; bottom: 20px; right: 20px;
+    background-color: #4A2513; color: white; border: none;
+    padding: 12px 12px; font-size: 16px; border-radius: 50%;
+    cursor: pointer; box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+#chatbot-container {
+    position: fixed; bottom: 80px; right: 20px;
+    width: 350px; max-height: 400px; background: white;
+    border: 1px solid #ccc; border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2); display: none;
+    flex-direction: column;
+}
+#chat-header {
+    background-color: #4A2513; color: white; padding: 10px;
+    text-align: center; font-weight: bold;
+}
+#chatbox {
+    flex: 1; padding: 10px; overflow-y: auto; max-height: 300px;
+}
+.message { padding: 8px; margin: 5px; border-radius: 5px; }
+.user { align-self: flex-end; }
+.bot {}
+#chat-input-container {
+    display: flex; border-top: 1px solid #ccc;
+}
+#userInput {
+    flex: 1; padding: 10px; border: none; outline: none;
+}
+#sendButton {
+    padding: 10px; background-color: #4A2513;
+    color: white; border: none; cursor: pointer;
+}
