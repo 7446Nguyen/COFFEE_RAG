@@ -79,7 +79,7 @@ class RAGModel:
                 ],
                 temperature=0
             )
-            return res['choices'][0]['message']['content'].strip()
+            return res.choices[0].message.content.strip()
 
         except Exception as e:
             return f"Error during completion: {str(e)}"
