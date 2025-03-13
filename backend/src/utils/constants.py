@@ -1,6 +1,5 @@
 import os
 
-
 OPENAI_ACCOUNT = os.getenv("OPENAI_TOKEN")
 PINECONE_ACCOUNT = os.getenv("PINECONE_TOKEN")
 
