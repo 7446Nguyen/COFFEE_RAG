@@ -1,7 +1,7 @@
 import os
 import openai
 from pinecone import Pinecone, ServerlessSpec
-from src.utils.constants import OPENAI_ACCOUNT, PINECONE_ACCOUNT, SYS_PROMPT
+from backend.src.utils.constants import OPENAI_ACCOUNT, PINECONE_ACCOUNT, SYS_PROMPT
 
 # Initialize Pinecone and OpenAI
 class RAGModel:
