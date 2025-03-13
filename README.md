@@ -20,6 +20,10 @@ The repository consists of:
 - **backend/**: Python-based API for handling retrieval and chatbot logic.
 - **frontend/**: Website interface, designed by **Tia Barfels**, using HTML, CSS, and JavaScript.
 
+## 📖 Data Source
+
+This project utilizes coffee-related data from [coffee-recommender](https://github.com/toferk/coffee-recommender), which provides a structured dataset for coffee recommendations and descriptions.
+
 ## 🛠️ Technologies Used
 
 - **Python (42.3%)**: Backend API, chatbot logic.
@@ -63,9 +67,8 @@ To run the project on your local machine:
 2. Open index.html in a Browser.
 
 ## 👥 Contributors
-
-    Jeff Nguyen – Project Lead, Backend Development.
-    Tia Barfels – Website Design & Frontend Development.
+    - Jeff Nguyen – Project Lead, Backend Development.
+    - Tia Barfels – Website Design & Frontend Development.
 
 ## 📜 License
 
