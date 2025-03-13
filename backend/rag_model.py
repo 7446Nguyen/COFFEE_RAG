@@ -4,6 +4,8 @@ from pinecone import Pinecone, ServerlessSpec
 from backend.src.utils.constants import OPENAI_ACCOUNT, PINECONE_ACCOUNT, SYS_PROMPT
 
 # Initialize Pinecone and OpenAI
+
+
 class RAGModel:
     def __init__(self, index_name='coffee-reviews'):
         """Initialize RAG model with Pinecone index and OpenAI API key."""
@@ -28,11 +30,14 @@ class RAGModel:
         """Retrieve relevant context from Pinecone using OpenAI embeddings."""
         try:
             # ✅ **UPDATED OpenAI Embedding Call**
-            response = openai.embeddings.create(input=[query], model=self.embed_model)
-            query_embedding = response.data[0].embedding  # ✅ Updated attribute access
+            response = openai.embeddings.create(
+                input=[query], model=self.embed_model)
+            # ✅ Updated attribute access
+            query_embedding = response.data[0].embedding
 
             # Query Pinecone for top-k matches
-            response = self.index.query(vector=query_embedding, top_k=top_k, include_metadata=True)
+            response = self.index.query(
+                vector=query_embedding, top_k=top_k, include_metadata=True)
 
             # Extract context from matched results
             contexts = [
@@ -66,7 +71,7 @@ class RAGModel:
     def complete(self, prompt, sys_prompt=SYS_PROMPT, model="gpt-4-turbo"):
         """Generate a response using OpenAI ChatCompletion."""
         try:
-            res = openai.ChatCompletion.create(
+            res = openai.chat.completions.create(
                 model=model,
                 messages=[
                     {"role": "system", "content": sys_prompt},
