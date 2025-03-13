@@ -15,8 +15,8 @@ async function sendMessage() {
     inputField.value = "";
     chatbox.scrollTop = chatbox.scrollHeight;
 
-    // Flask API URL (Change if using local or another deployment)
-    const API_URL = "https://flask-rag-api.onrender.com/ask"; // Change to your actual API URL
+    // ✅ Correct Flask API URL
+    const API_URL = "https://coffee-rag.onrender.com/ask";
 
     try {
         let response = await fetch(API_URL, {
@@ -38,3 +38,4 @@ document.getElementById("sendButton").addEventListener("click", sendMessage);
 document.getElementById("userInput").addEventListener("keypress", function(event) {
     if (event.key === "Enter") sendMessage();
 });
+
