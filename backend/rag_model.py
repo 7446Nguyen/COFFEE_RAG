@@ -27,9 +27,9 @@ class RAGModel:
     def retrieve(self, query, top_k=3, limit=4000):
         """Retrieve relevant context from Pinecone using OpenAI embeddings."""
         try:
-            # Get query embedding
-            response = openai.Embedding.create(input=[query], model=self.embed_model)
-            query_embedding = response['data'][0]['embedding']
+            # ✅ **UPDATED OpenAI Embedding Call**
+            response = openai.embeddings.create(input=[query], model=self.embed_model)
+            query_embedding = response.data[0].embedding  # ✅ Updated attribute access
 
             # Query Pinecone for top-k matches
             response = self.index.query(vector=query_embedding, top_k=top_k, include_metadata=True)
