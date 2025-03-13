@@ -77,7 +77,7 @@
             inputField.value = "";
             chatbox.scrollTop = chatbox.scrollHeight;
 
-            let response = await fetch("https://flask-rag-api.onrender.com/ask", {
+            let response = await fetch("https://coffee-rag.onrender.com/ask", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ query: userMessage })

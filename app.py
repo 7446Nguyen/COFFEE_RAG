@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 from backend.rag_model import rag_model
+import os
+from flask_cors import CORS
+
 
 app = Flask(__name__)
-CORS(app)  # Allows cross-origin requests (for frontend integration)
+CORS(app, origins=["https://hipstirredcoffee.netlify.app"])   # Allows cross-origin requests (for frontend integration)
 
 @app.route('/ask', methods=['POST'])
 def ask_rag():
@@ -17,4 +19,5 @@ def ask_rag():
     return jsonify({"response": response})
 
 if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 8000)) 
     app.run(host='0.0.0.0', port=5000, debug=True)

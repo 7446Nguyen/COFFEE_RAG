@@ -1,9 +1,11 @@
 import os
 import openai
 from pinecone import Pinecone, ServerlessSpec
-from src.utils.constants import OPENAI_ACCOUNT, PINECONE_ACCOUNT, SYS_PROMPT
+from backend.src.utils.constants import OPENAI_ACCOUNT, PINECONE_ACCOUNT, SYS_PROMPT
 
 # Initialize Pinecone and OpenAI
+
+
 class RAGModel:
     def __init__(self, index_name='coffee-reviews'):
         """Initialize RAG model with Pinecone index and OpenAI API key."""
@@ -27,12 +29,15 @@ class RAGModel:
     def retrieve(self, query, top_k=3, limit=4000):
         """Retrieve relevant context from Pinecone using OpenAI embeddings."""
         try:
-            # Get query embedding
-            response = openai.Embedding.create(input=[query], model=self.embed_model)
-            query_embedding = response['data'][0]['embedding']
+            # ✅ **UPDATED OpenAI Embedding Call**
+            response = openai.embeddings.create(
+                input=[query], model=self.embed_model)
+            # ✅ Updated attribute access
+            query_embedding = response.data[0].embedding
 
             # Query Pinecone for top-k matches
-            response = self.index.query(vector=query_embedding, top_k=top_k, include_metadata=True)
+            response = self.index.query(
+                vector=query_embedding, top_k=top_k, include_metadata=True)
 
             # Extract context from matched results
             contexts = [
@@ -66,7 +71,7 @@ class RAGModel:
     def complete(self, prompt, sys_prompt=SYS_PROMPT, model="gpt-4-turbo"):
         """Generate a response using OpenAI ChatCompletion."""
         try:
-            res = openai.ChatCompletion.create(
+            res = openai.chat.completions.create(
                 model=model,
                 messages=[
                     {"role": "system", "content": sys_prompt},
@@ -74,7 +79,7 @@ class RAGModel:
                 ],
                 temperature=0
             )
-            return res['choices'][0]['message']['content'].strip()
+            return res.choices[0].message.content.strip()
 
         except Exception as e:
             return f"Error during completion: {str(e)}"
