@@ -1,7 +1,5 @@
 # COFFEE_RAG ☕
 
-![Hipstirred Coffee Website Screenshot](https://hipstirredcoffee.netlify.app/screenshot.png)
-
 COFFEE_RAG is a **Retrieval-Augmented Generation (RAG) system** designed to enhance responses by combining **information retrieval** and **natural language generation**. This project powers a chatbot that provides **context-aware** and **accurate** answers about coffee-related topics.
 
 🌐 **Live Website**: [Hipstirred Coffee Chatbot](https://hipstirredcoffee.netlify.app/)
