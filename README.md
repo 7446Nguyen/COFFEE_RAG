@@ -1,72 +1,72 @@
-COFFEE_RAG ☕
+# COFFEE_RAG ☕
 
-COFFEE_RAG is a Retrieval-Augmented Generation (RAG) system designed to enhance responses by combining information retrieval and natural language generation. This project powers a chatbot that provides context-aware and accurate answers about coffee-related topics.​
+![Hipstirred Coffee Website Screenshot](https://hipstirredcoffee.netlify.app/screenshot.png)
 
-🌐 Live Website: Hipstirred Coffee Chatbot
-🚀 Features
+COFFEE_RAG is a **Retrieval-Augmented Generation (RAG) system** designed to enhance responses by combining **information retrieval** and **natural language generation**. This project powers a chatbot that provides **context-aware** and **accurate** answers about coffee-related topics.
 
-    AI-Powered Chatbot ☕: Get detailed and relevant coffee-related information.​
-    Retrieval-Augmented Generation (RAG) 📚: Combines retrieval and generation for improved responses.​
-    User-Friendly Interface 🖥️: Designed for seamless interaction.​
-    Web-Based Implementation 🌍: Accessible online via the provided link.​
+🌐 **Live Website**: [Hipstirred Coffee Chatbot](https://hipstirredcoffee.netlify.app/)
 
-🏗️ Project Structure
+## 🚀 Features
 
-The repository consists of:​
+- **AI-Powered Chatbot** ☕: Get detailed and relevant coffee-related information.
+- **Retrieval-Augmented Generation (RAG)** 📚: Combines retrieval and generation for improved responses.
+- **User-Friendly Interface** 🖥️: Designed for seamless interaction.
+- **Web-Based Implementation** 🌍: Accessible online via the provided link.
 
-    backend/: Python-based API for handling retrieval and chatbot logic.​
-    frontend/: Website interface, designed by Tia Barfels, using HTML, CSS, and JavaScript.​
+## 🏗️ Project Structure
 
-🛠️ Technologies Used
+The repository consists of:
 
-    Python (42.3%): Backend API, chatbot logic.​
-    HTML (41.2%): Webpage structure.​
-    snappify.netlify.app+1answers.netlify.com+1
-    CSS (12.9%): Styling for a clean UI.​
-    JavaScript (3.6%): Adds interactivity.​
-    snappify.netlify.app+4pagepixels.com+4github.com+4
+- **backend/**: Python-based API for handling retrieval and chatbot logic.
+- **frontend/**: Website interface, designed by **Tia Barfels**, using HTML, CSS, and JavaScript.
 
-📖 How to Use the Chatbot
+## 🛠️ Technologies Used
 
-    Visit the Website: Hipstirred Coffee Chatbot​
-    Ask a Coffee-Related Question: Type in queries like:​
-    pagepixels.com+4app-screenshot-builder.netlify.app+4snappify.netlify.app+4
-        “What’s the best way to brew espresso?”​
-        “How do I make cold brew at home?”​
-    Receive AI-Generated Responses: The chatbot will retrieve and generate the best possible answer.​
-    Refine Your Questions: If needed, tweak your question for more specific results.​
+- **Python (42.3%)**: Backend API, chatbot logic.
+- **HTML (41.2%)**: Webpage structure.
+- **CSS (12.9%)**: Styling for a clean UI.
+- **JavaScript (3.6%)**: Adds interactivity.
 
-🏗️ Getting Started Locally
+## 📖 How to Use the Chatbot
 
-To run the project on your local machine:​
-Backend Setup
+1. **Visit the Website**: [Hipstirred Coffee Chatbot](https://hipstirredcoffee.netlify.app/)
+2. **Ask a Coffee-Related Question**: Type in queries like:
+   - “What’s the best way to brew espresso?”
+   - “How do I make cold brew at home?”
+3. **Receive AI-Generated Responses**: The chatbot will retrieve and generate the best possible answer.
+4. **Refine Your Questions**: If needed, tweak your question for more specific results.
 
-    Clone the Repository:
+## 🏗️ Getting Started Locally
 
-    git clone https://github.com/7446Nguyen/COFFEE_RAG.git
-    cd COFFEE_RAG/backend
+To run the project on your local machine:
 
-    Install Dependencies:
+### Backend Setup
 
-    pip install -r requirements.txt
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/7446Nguyen/COFFEE_RAG.git
+   cd COFFEE_RAG/backend
 
-    Run the Backend Server:
+2. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
 
+4. **Run the Backend Server**:
+    ```bash
     python app.py
 
-Frontend Setup
+### Frontend Setup
+1. **Navigate to the Frontend Directory**:
+   ```bash
+   cd ../frontend
+   
+2. Open index.html in a Browser.
 
-    Navigate to the Frontend Directory:
+## 👥 Contributors
 
-    cd ../frontend
+    Jeff Nguyen – Project Lead, Backend Development.
+    Tia Barfels – Website Design & Frontend Development.
 
-    Open index.html in a Browser.
-
-👥 Contributors
-
-    Jeff Nguyen – Project Lead, Backend Development.​
-    Tia Barfels – Website Design & Frontend Development.​
-
-📜 License
+## 📜 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
