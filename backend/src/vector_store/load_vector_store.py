@@ -90,7 +90,7 @@ def batch_upsert(index, vectors, batch_size):
     for i in range(0, len(vectors), batch_size):
         batch = vectors[i:i + batch_size]
         index.upsert(batch)
-        print(f"✅ Upserted batch {i} to {i + batch_size}")
+        print(f"Upserted batch {i} to {i + batch_size}")
 
 #%%
 
