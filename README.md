@@ -19,6 +19,7 @@ MochaMate is a **Retrieval-Augmented Generation (RAG) system** designed to enhan
 
 - **AI-Powered Chatbot** ☕: Get detailed and relevant coffee-related information.
 - **Retrieval-Augmented Generation (RAG)** 📚: Combines retrieval and generation for improved responses.
+- **Pinecone Vector Database** 🏪: Stores review embeddings and metadata for LLM
 - **User-Friendly Interface** 🖥️: Designed for seamless interaction.
 - **Web-Based Implementation** 🌍: Accessible online via the provided link.
 
