@@ -42,7 +42,3 @@ This project utilizes coffee-related data from [coffee-recommender](https://gith
 ## 👥 Contributors
 - Tia Barfels – Website Design & Frontend Development.
 - Jeff Nguyen – Project Lead, Backend Development.
-
-## 📜 License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
