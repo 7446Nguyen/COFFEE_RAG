@@ -34,11 +34,12 @@ This project utilizes coffee-related data from [coffee-recommender](https://gith
 ## 📖 How to Use the Chatbot
 
 1. **Visit the Website**: [Hipstirred Coffee Chatbot](https://hipstirredcoffee.netlify.app/)
-2. **Ask a Coffee-Related Question**: Type in queries like:
+2. Go to the bottom right of the page and click the button.
+3. **Ask a Coffee-Related Question**: Type in queries like:
    - “What’s the best way to brew espresso?”
    - “How do I make cold brew at home?”
-3. **Receive AI-Generated Responses**: The chatbot will retrieve and generate the best possible answer.
-4. **Refine Your Questions**: If needed, tweak your question for more specific results.
+4. **Receive AI-Generated Responses**: The chatbot will retrieve and generate the best possible answer.
+5. **Refine Your Questions**: If needed, tweak your question for more specific results.
 
 ## 🏗️ Getting Started Locally
 
