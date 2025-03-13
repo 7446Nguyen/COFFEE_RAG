@@ -4,6 +4,17 @@ MochaMate is a **Retrieval-Augmented Generation (RAG) system** designed to enhan
 
 🌐 **Live Website**: [Hipstirred Coffee Chatbot](https://hipstirredcoffee.netlify.app/)
 
+
+## 📖 How to Use the Chatbot
+
+1. **Visit the Website**: [Hipstirred Coffee Chatbot](https://hipstirredcoffee.netlify.app/)
+2. Go to the bottom right of the page and click the button.
+3. **Ask a Coffee-Related Question**: Type in queries like:
+   - “What's the best dark roast?”
+   - “What coffee is bright, floral, with hints of citrus?”
+4. **Receive AI-Generated Responses**: The chatbot will retrieve and generate the best possible answer.
+5. **Refine Your Questions**: If needed, tweak your question for more specific results.
+   
 ## 🚀 Features
 
 - **AI-Powered Chatbot** ☕: Get detailed and relevant coffee-related information.
@@ -29,15 +40,6 @@ This project utilizes coffee-related data from [coffee-recommender](https://gith
 - **CSS (12.9%)**: Styling for a clean UI.
 - **JavaScript (3.6%)**: Adds interactivity.
 
-## 📖 How to Use the Chatbot
-
-1. **Visit the Website**: [Hipstirred Coffee Chatbot](https://hipstirredcoffee.netlify.app/)
-2. Go to the bottom right of the page and click the button.
-3. **Ask a Coffee-Related Question**: Type in queries like:
-   - “What's the best dark roast?”
-   - “What coffee is bright, floral, with hints of citrus?”
-4. **Receive AI-Generated Responses**: The chatbot will retrieve and generate the best possible answer.
-5. **Refine Your Questions**: If needed, tweak your question for more specific results.
 
 ## 👥 Contributors
 - Tia Barfels – Website Design & Frontend Development.
