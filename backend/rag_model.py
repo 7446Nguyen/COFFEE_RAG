@@ -18,7 +18,7 @@ class RAGModel:
         if index_name not in self.pc.list_indexes().names():
             self.pc.create_index(
                 index_name,
-                dimension=1536,  # Dimensionality for text-embedding-ada-002
+                dimension=1536,
                 metric='cosine',
                 spec=ServerlessSpec(cloud='aws', region='us-east-1')
             )
@@ -29,10 +29,8 @@ class RAGModel:
     def retrieve(self, query, top_k=3, limit=4000):
         """Retrieve relevant context from Pinecone using OpenAI embeddings."""
         try:
-            # ✅ **UPDATED OpenAI Embedding Call**
             response = openai.embeddings.create(
                 input=[query], model=self.embed_model)
-            # ✅ Updated attribute access
             query_embedding = response.data[0].embedding
 
             # Query Pinecone for top-k matches
@@ -60,7 +58,7 @@ class RAGModel:
                     prompt += f"{ctx}\n\n---\n\n"
                     added_length += len(ctx)
                 else:
-                    break  # Stop if adding more text exceeds the limit
+                    break
 
             prompt += f"\nQuestion: {query}\nAnswer:"
             return prompt
@@ -87,11 +85,11 @@ class RAGModel:
     def rag_pipeline(self, user_query):
         """Full RAG pipeline: retrieve relevant info + generate response."""
         prompt = self.retrieve(user_query)
-        if "Error" in prompt:  # Handle retrieval errors
+        if "Error" in prompt:
             return prompt
         response = self.complete(prompt)
         return response
 
 
-# Instantiate RAG model globally (so it's initialized once)
+# Instantiate RAG model globally
 rag_model = RAGModel()
