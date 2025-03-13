@@ -15,7 +15,7 @@ async function sendMessage() {
     inputField.value = "";
     chatbox.scrollTop = chatbox.scrollHeight;
 
-    const API_URL = "https://coffee-rag.onrender.com/ask"; // ✅ Corrected API URL
+    const API_URL = "https://coffee-rag.onrender.com/ask"; 
 
     try {
         let response = await fetch(API_URL, {
