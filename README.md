@@ -39,35 +39,9 @@ This project utilizes coffee-related data from [coffee-recommender](https://gith
 4. **Receive AI-Generated Responses**: The chatbot will retrieve and generate the best possible answer.
 5. **Refine Your Questions**: If needed, tweak your question for more specific results.
 
-## 🏗️ Getting Started Locally
-
-To run the project on your local machine:
-
-### Backend Setup
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/7446Nguyen/COFFEE_RAG.git
-   cd COFFEE_RAG/backend
-
-2. **Install Dependencies**:
-   ```bash
-   pip install -r requirements.txt
-
-4. **Run the Backend Server**:
-    ```bash
-    python app.py
-
-### Frontend Setup
-1. **Navigate to the Frontend Directory**:
-   ```bash
-   cd ../frontend
-   
-2. Open index.html in a Browser.
-
 ## 👥 Contributors
-    - Jeff Nguyen – Project Lead, Backend Development.
-    - Tia Barfels – Website Design & Frontend Development.
+- Tia Barfels – Website Design & Frontend Development.
+- Jeff Nguyen – Project Lead, Backend Development.
 
 ## 📜 License
 
