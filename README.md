@@ -3,7 +3,7 @@
 MochaMate is a **Retrieval-Augmented Generation (RAG) system** designed to enhance responses by combining **information retrieval** and **natural language generation**. This project powers a chatbot that provides **context-aware** and **accurate** answers about coffee-related topics.
 
 🌐 **Live Website**: [Hipstirred Coffee Chatbot](https://hipstirredcoffee.netlify.app/)
- Please allow a minute for serives to spin up
+ Please allow a minute for services to spin up
 
 ## 📖 How to Use the Chatbot
 
